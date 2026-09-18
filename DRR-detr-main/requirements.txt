@@ -1,0 +1,15 @@
+numpy
+Pillow
+PyYAML
+packaging
+scipy
+matplotlib
+pycocotools
+timm
+transformers
+torch
+torchvision
+
+# Optional dependencies for ONNX export and simplification:
+# onnx
+# onnxsim

@@ -1,0 +1,29 @@
+__include__: [
+  '../dataset/so_detection.yml',
+  '../runtime.yml',
+  './include/dataloader.yml',
+  './include/optimizer.yml',
+  './include/rtdetr_r50vd.yml',
+]
+
+output_dir: ./output/SrtdetrV3-r50-coco-100
+
+# === 训练配置 ===
+use_amp: False      # FP32 全精度（PyTorch 2.0.1 兼容性更好）
+sync_bn: False      # 关 SyncBN 省显存
+# find_unused_parameters 保持 True（optimizer.yml），Frozen Encoder 的 no_grad 参数需要它
+
+# 多尺度训练保持（死锁根因是 num_workers>0，已修复）
+
+# bs=1 → lr 等比减半（线性缩放规则）
+optimizer:
+  type: AdamW
+  params:
+    -
+      params: 'backbone'
+      lr: 0.000005
+
+  lr: 0.00005
+
+# 磁盘优化：每 10 轮存档 + best.pth
+checkpoint_step: 10
