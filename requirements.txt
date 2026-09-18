@@ -1,15 +1,30 @@
-numpy
-Pillow
-PyYAML
-packaging
-scipy
-matplotlib
-pycocotools
-timm
-transformers
-torch
-torchvision
+# Tested with Python 3.9.7, PyTorch 2.0.1 and CUDA 11.8.
+#
+# Install the matching CUDA 11.8 PyTorch build from the PyTorch channel or
+# wheel index when GPU support is required.
 
-# Optional dependencies for ONNX export and simplification:
-# onnx
-# onnxsim
+# Core training and inference
+torch==2.0.1
+torchvision==0.15.2
+numpy==1.24.3
+Pillow==11.3.0
+PyYAML==6.0
+packaging==26.2
+scipy==1.11.2
+pycocotools==2.0.11
+timm==1.0.27
+transformers==4.40.2
+
+# Visualization and analysis scripts
+matplotlib==3.8.0
+opencv-python==4.11.0.86
+tqdm==4.67.3
+seaborn==0.13.2
+
+# ONNX export and validation
+onnx==1.14.0
+onnxruntime==1.15.1
+onnxsim==0.4.36
+
+# FLOPs measurement
+fvcore==0.1.5.post20221221
