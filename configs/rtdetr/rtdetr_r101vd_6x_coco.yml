@@ -1,0 +1,35 @@
+__include__: [
+  '../dataset/so_detection.yml',
+  '../runtime.yml',
+  './include/dataloader.yml',
+  './include/optimizer.yml',
+  './include/rtdetr_r50vd.yml',
+]
+
+PResNet:
+  depth: 101
+
+HybridEncoder:
+  hidden_dim: 320
+  dim_feedforward: 1280
+
+RTDETRTransformer:
+  feat_channels: [320, 320, 320]
+
+# === A40 双卡最优参数 ===
+output_dir: ./output/rtdetr_r101vd_6x_coco
+
+sync_bn: True         # 双卡 BN 同步
+use_amp: True         # AMP 混合精度（A40 48G 充裕）
+# use_ema 保持 True（optimizer.yml 默认），平滑稳定提升 AP
+
+# 磁盘：每 10 轮存档 + best.pth
+checkpoint_step: 10
+
+# DataLoader：A100 40G 双卡
+train_dataloader:
+  batch_size: 3
+  num_workers: 8
+
+val_dataloader:
+  num_workers: 8
