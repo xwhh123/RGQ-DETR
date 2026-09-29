@@ -74,15 +74,11 @@ Training outputs are written to the configured output_dir, including:
 best.pth
 last.pth
 checkpointXXXX.pth
-
-## Dataset Availability Statement
-
-Due to third-party licensing, privacy protection, and data-use restrictions, the complete dataset is not included in this repository. Researchers who need access for academic purposes may request the dataset by contacting the authors:
-
-**Email:** [gs.maokx24@gzu.edu.cn](mailto:gs.maokx24@gzu.edu.cn)
-
-Please briefly describe your intended research use and affiliation when submitting a request. Any use, storage, or redistribution of the dataset must comply with the applicable data-use requirements.
 log.txt
 eval/
 ~~~
+## Dataset Availability Statement
 
+Due to third-party licensing, privacy protection, and data-use restrictions, the complete dataset is not included in this repository. Researchers who need access for academic purposes may request the dataset by contacting the authors:**Email:** [gs.maokx24@gzu.edu.cn](mailto:gs.maokx24@gzu.edu.cn)
+
+Please briefly describe your intended research use and affiliation when submitting a request. Any use, storage, or redistribution of the dataset must comply with the applicable data-use requirements.
