@@ -16,8 +16,7 @@ Based on the RT-DETR framework, this study proposes Representation–Geometry–
 - Python == 3.9.7
 - CUDA-compatible PyTorch/torchvision pair (tested with PyTorch 2.0.1 and torchvision 0.15.2)
 
-The repository provides the complete dependency list in `requirements.txt`. It intentionally leaves the PyTorch versions unpinned; record the resolved versions for exact reproduction. The dataset and checkpoints are not included.
-
+The repository provides the complete dependency list in `requirements.txt`. 
 **Step 0. Create the Conda environment**
 
 ~~~bash
