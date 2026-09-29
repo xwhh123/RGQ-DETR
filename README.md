@@ -10,9 +10,10 @@ Based on the RT-DETR framework, this study proposes Representation–Geometry–
 ### 2. Prepare the Dataset
 
 The model expects a COCO-format dataset with two categories:
+~~~bash
 0: live_plant
 1: dead_plant
-
+~~~
 Place the dataset under data/so/:
 ~~~bash
 data/so/
@@ -53,6 +54,3 @@ log.txt
 eval/
 ~~~
 
-~~~text
-configs/rtdetr/ablation/
-~~~
