@@ -7,6 +7,30 @@ Based on the RT-DETR framework, this study proposes Representation–Geometry–
 
 ## Get Started
 
+### 1. Prerequisites
+
+**Recommended environment**
+
+- Ubuntu >= 20.04
+- CUDA >= 11.8
+- Python == 3.9.7
+- CUDA-compatible PyTorch/torchvision pair (tested with PyTorch 2.0.1 and torchvision 0.15.2)
+
+The repository provides the complete dependency list in `requirements.txt`. It intentionally leaves the PyTorch versions unpinned; record the resolved versions for exact reproduction. The dataset and checkpoints are not included.
+
+**Step 0. Create the Conda environment**
+
+~~~bash
+conda create --name rgq-detr python=3.9.7 -y
+conda activate rgq-detr
+~~~
+
+**Step 1. Install dependencies from `requirements.txt`**
+
+~~~bash
+pip install -r requirements.txt
+~~~
+
 ### 2. Prepare the Dataset
 
 The model expects a COCO-format dataset with two categories:
