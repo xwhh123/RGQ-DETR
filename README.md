@@ -14,14 +14,14 @@ The model expects a COCO-format dataset with two categories:
 1: dead_plant
 
 Place the dataset under data/so/:
-
+~~~bash
 data/so/
 ├── annotations/
 │   ├── instances_train2017.json
 │   └── instances_val2017.json
 ├── train2017/
 └── val2017/
-
+~~~
 ### 3. Training
 
 **Single GPU**
@@ -45,12 +45,13 @@ torchrun --standalone --nproc_per_node=4 --master-port=8989 \
 ~~~
 
 Training outputs are written to the configured output_dir, including:
+~~~bash
 best.pth
 last.pth
 checkpointXXXX.pth
 log.txt
 eval/
-
+~~~
 
 ~~~text
 configs/rtdetr/ablation/
