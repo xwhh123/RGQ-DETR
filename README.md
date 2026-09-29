@@ -2,5 +2,5 @@
 
 Based on the RT-DETR framework, this study proposes Representation–Geometry–Quality DETR (RGQ-DETR), an end-to-end detector designed for post-exposure live/dead seedling assessment. The method follows the agricultural decision chain: retain the fine structural evidence that indicates stem support and ground contact, guide feature sampling toward the evolving plant geometry, and train classification quality together with localization reliability. 
 
-[fig03_drr_detr_architecture_cropped.pdf](https://github.com/user-attachments/files/32787003/fig03_drr_detr_architecture_cropped.pdf)
+
 
